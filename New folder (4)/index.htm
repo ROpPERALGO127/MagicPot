@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Steaming Soup Icon</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+        }
+
+        .bowl {
+            width: 120px;
+            height: 60px;
+            background: black;
+            border-radius: 0 0 60px 60px;
+            position: relative;
+        }
+
+        .spoon {
+            width: 60px;
+            height: 10px;
+            background: black;
+            position: absolute;
+            top: -20px;
+            right: -20px;
+            transform: rotate(30deg);
+            border-radius: 5px;
+        }
+
+        .steam {
+            position: absolute;
+            width: 10px;
+            height: 30px;
+            background: rgba(0, 0, 0, 0.1);
+            border-radius: 50%;
+            top: -40px;
+            left: 20px;
+            animation: steamUp 2s infinite ease-in-out;
+        }
+
+        .steam:nth-child(2) {
+            left: 50px;
+            animation-delay: 0.5s;
+        }
+
+        .steam:nth-child(3) {
+            left: 80px;
+            animation-delay: 1s;
+        }
+
+        @keyframes steamUp {
+            0% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-20px);
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="bowl">
+        <div class="spoon"></div>
+        <div class="steam"></div>
+        <div class="steam"></div>
+        <div class="steam"></div>
+    </div>
+
+</body>
+</html>
